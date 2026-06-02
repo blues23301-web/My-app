@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickLoan Finance</title><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+header{
+    background:#0066cc;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.hero{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:2.2rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#28a745;
+    color:white;
+    padding:12px 24px;
+    border-radius:6px;
+    text-decoration:none;
+}
+
+.section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+form{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+input, select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#0066cc;
+    color:white;
+    border-radius:6px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#222;
+    color:white;
+}
+</style></head>
+<body><header>
+    <h2>QuickLoan Finance</h2>
+</header><section class="hero">
+    <h1>Fast & Secure Loan Applications</h1>
+    <p>Apply online and receive a response from our team.</p>
+    <a href="#apply" class="btn">Apply Now</a>
+</section><section class="section">
+    <h2>Why Choose Us?</h2>
+    <br>
+    <div class="features">
+        <div class="card">
+            <h3>Quick Review</h3>
+            <p>Applications reviewed promptly.</p>
+        </div>    <div class="card">
+        <h3>Secure Process</h3>
+        <p>Your information is protected.</p>
+    </div>
+
+    <div class="card">
+        <h3>Flexible Terms</h3>
+        <p>Various repayment options available.</p>
+    </div>
+</div>
+
+</section><section class="section" id="apply">
+    <h2>Loan Inquiry Form</h2>
+    <br><form id="loanForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="email" placeholder="Email Address" required>
+
+    <select required>
+        <option value="">Select Loan Amount</option>
+        <option>$500</option>
+        <option>$1,000</option>
+        <option>$2,000</option>
+        <option>$5,000</option>
+    </select>
+
+    <button type="submit">Submit Application</button>
+</form>
+
+<p id="message"></p>
+
+</section><footer>
+    © 2026 QuickLoan Finance
+</footer><script>
+document.getElementById("loanForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    document.getElementById("message").innerHTML =
+    "<br><b>Thank you. Your application has been received for review.</b>";
+});
+</script></body>
+</html>
